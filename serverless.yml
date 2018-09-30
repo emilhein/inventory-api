@@ -1,0 +1,43 @@
+service: serverless-rest-api
+
+frameworkVersion: ">=1.1.0 <2.0.0"
+plugins:
+  - serverless-offline
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+
+functions:
+  create:
+    handler: items/create.create
+    events:
+      - http:
+          path: items
+          method: post
+          cors: true
+
+  list:
+    handler: items/list.list
+    events:
+      - http:
+          path: items
+          method: get
+          cors: true
+
+  update:
+    handler: items/update.update
+    events:
+      - http:
+          path: items/{id}
+          method: put
+          cors: true
+
+  getdetails:
+    handler: items/overview.get
+    events:
+      - http:
+          path: getdetails/{endDate}
+          method: get
+          cors: true
+         

@@ -1,0 +1,17 @@
+{
+    "name": "aws-rest",
+    "version": "1.0.0",
+    "description": "Serverless CRUD service exposing a REST HTTP interface",
+    "author": "Emil Hein Eriksen",
+    "scripts": {
+        "dev": "sls offline start",
+        "test": "./node_modules/.bin/mocha --reporter spec"
+    },
+    "license": "MIT",
+    "devdependencies": {},
+    "devDependencies": {
+        "serverless-offline": "^3.25.17",
+        "mocha": "^5.2.0",
+        "chai": "4.2.0"
+    }
+}
